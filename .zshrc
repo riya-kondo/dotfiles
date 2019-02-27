@@ -108,9 +108,9 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 # キーのバインド
 bindkey '^p' history-beginning-search-backward-end
-bindkey '^[[A' history-beginning-search-backward-end
+bindkey '^[OA' history-beginning-search-backward-end
 bindkey '^b' history-beginning-search-forward-end
-bindkey '[[B' history-beginning-search-forward-end
+bindkey '^[OB' history-beginning-search-forward-end
 
 # cdの後にlsの実行
 chpwd() { ls -ltrh --color=auto }
@@ -145,7 +145,3 @@ alias vi='/usr/bin/vim'
 alias ls="ls --color=auto"
 alias la="ls -la --color=auto"
 alias so="source"
-
-# GPU計算ライブラリ設定
-export PATH="/usr/local/cuda/bin:$PATH"
-export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
