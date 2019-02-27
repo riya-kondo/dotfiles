@@ -1,4 +1,13 @@
 #! /bin/bash
 
-export http_proxy="http://proxy:port"
-export https_proxy="http://proxy:port"
+echo -n "Do you setup proxy?[Y/n] "
+if read -q; then
+    export http_proxy="http://proxy:port"
+    export https_proxy=$http_proxy
+    echo "\nhttp_proxy setup is successfully"
+else
+    export http_proxy=""
+    export https_proxy=$http_proxy
+    echo "\nhttp_proxy is not set."
+fi
+
