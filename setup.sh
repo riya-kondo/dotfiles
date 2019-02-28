@@ -2,7 +2,9 @@
 
 DOT_FILES=( .??* )
 
-mkdir $HOME/zsh
+if [ ! -d {$HOME/zsh} ]; then
+  mkdir $HOME/zsh
+fi
 
 for file in ${DOT_FILES[@]}
 do
