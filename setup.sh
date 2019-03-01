@@ -3,9 +3,18 @@
 DOT_FILES=( .??* )
 NG_LIST=( .git .gitignore .DS_Store )
 
+# zshフォルダのチェック
 if [ ! -d $HOME/zsh ]; then
   mkdir $HOME/zsh
 fi
+# カラースキームのチェック
+if [ ! -f $HOME/.vim/colors/molokai.vim ]; then
+  curl -fsOL https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim \
+    && \
+      mv molokai.vim $HOME/.vim/colors/molokai.vim
+fi
+
+ln -s $HOME/dotfiles/template $HOME/.vim
 
 for file in ${DOT_FILES[@]}
 do

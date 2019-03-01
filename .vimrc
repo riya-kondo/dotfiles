@@ -1,3 +1,5 @@
+" シンタックスハイライトをオン
+syntax on
 "行番号表示"
 set number
 "自動インデント"
@@ -15,9 +17,12 @@ set backspace=indent,eol,start
 "カーソルの回り込みをオンにする"
 set whichwrap=b,s,h,l,<,>,[,],~
 
-".pyファイルをvimで生成した時にテンプレートで作成する"
+"vimで生成した時にテンプレートで作成する"
 autocmd BufNewFile *.py 0r $HOME/.vim/template/python.txt
+autocmd BufNewFile *.html 0r $HOME/.vim/template/html.txt
+
 "カラースキームの指定(~/.vim/colors/)"
+set t_Co=256
 colorscheme molokai
 
 "ステータスラインの表示"
