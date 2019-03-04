@@ -16,6 +16,9 @@ inoremap jj <Esc>
 set backspace=indent,eol,start
 "カーソルの回り込みをオンにする"
 set whichwrap=b,s,h,l,<,>,[,],~
+"エンコーディング"
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 
 "vimで生成した時にテンプレートで作成する"
 autocmd BufNewFile *.py 0r $HOME/.vim/template/python.txt
