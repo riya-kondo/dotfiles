@@ -113,7 +113,7 @@ bindkey '^b' history-beginning-search-forward-end
 bindkey '^[OB' history-beginning-search-forward-end
 
 # cdの後にlsの実行
-chpwd() { ls -ltrh --color=auto }
+chpwd() { la }
 
 # git設定
 # フック関数を登録する関数のロード
@@ -141,7 +141,15 @@ PROMPT=$PROMPT' %~
 
 # エイリアス
 alias zshconfig="vi ~/.zshrc"
-alias vi='/usr/bin/vim'
-alias ls="ls --color=auto"
-alias la="ls -la --color=auto"
+alias vi='vim'
 alias so="source"
+case ${OSTYPE} in
+  darwin*)
+    alias ls="ls -G"
+    alias la="ls -lAh"
+  ;;
+  linux*)
+    alias ls="ls --color=auto"
+    alias la="ls -la --color=auto"
+  ;;
+esac
