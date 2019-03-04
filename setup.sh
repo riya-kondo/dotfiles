@@ -9,6 +9,7 @@ if [ ! -d $HOME/zsh ]; then
 fi
 # カラースキームのチェック
 if [ ! -f $HOME/.vim/colors/molokai.vim ]; then
+  mkdir -p $HOME/.vim/colors
   curl -fsOL https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim \
     && \
       mv molokai.vim $HOME/.vim/colors/molokai.vim
