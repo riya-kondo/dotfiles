@@ -1,11 +1,15 @@
 #! /bin/zsh
 
 DOT_FILES=( .??* )
-NG_LIST=( .git .gitignore .DS_Store )
+NG_LIST=( .git .gitignore .DS_Store .proxy_setup)
 
 # zshフォルダのチェック
 if [ ! -d $HOME/zsh ]; then
   mkdir $HOME/zsh
+fi
+# proxyファイルのチェック
+if [ ! -d $HOME/.proxy_setup ]; then
+  cp $HOME/dotfiles/.proxy_setup $HOME/.proxy_setup
 fi
 # カラースキームのチェック
 if [ ! -f $HOME/.vim/colors/molokai.vim ]; then
@@ -14,7 +18,7 @@ if [ ! -f $HOME/.vim/colors/molokai.vim ]; then
     && \
       mv molokai.vim $HOME/.vim/colors/molokai.vim
 fi
-
+# templateディレクトリをリンク付け
 ln -s $HOME/dotfiles/template $HOME/.vim
 
 for file in ${DOT_FILES[@]}
