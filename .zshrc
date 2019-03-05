@@ -112,8 +112,6 @@ bindkey '^[OA' history-beginning-search-backward-end
 bindkey '^b' history-beginning-search-forward-end
 bindkey '^[OB' history-beginning-search-forward-end
 
-# cdの後にlsの実行
-chpwd() { la }
 
 # git設定
 # フック関数を登録する関数のロード
@@ -147,9 +145,12 @@ case ${OSTYPE} in
   darwin*)
     alias ls="ls -G"
     alias la="ls -lAh"
+    # cdの後にlsの実行
+    chpwd() { la -G}
   ;;
   linux*)
     alias ls="ls --color=auto"
     alias la="ls -la --color=auto"
+    chpwd() { ls -lth --color=auto }
   ;;
 esac
