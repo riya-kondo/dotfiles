@@ -18,7 +18,10 @@ set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,],~
 "エンコーディング"
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+"書き込み時のエンコーディング"
+set fileencoding=utf-8
+"読み込み時のエンコーディング(左から)"
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 
 "vimで生成した時にテンプレートで作成する"
 autocmd BufNewFile *.py 0r $HOME/.vim/template/python.txt
