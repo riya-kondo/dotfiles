@@ -108,9 +108,7 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 # キーのバインド
 bindkey '^p' history-beginning-search-backward-end
-bindkey '^[OA' history-beginning-search-backward-end
 bindkey '^b' history-beginning-search-forward-end
-bindkey '^[OB' history-beginning-search-forward-end
 
 
 # git設定
@@ -141,14 +139,20 @@ PROMPT=$PROMPT' %~
 alias zshconfig="vi ~/.zshrc"
 alias vi='vim'
 alias so="source"
+
+# OS毎の設定
 case ${OSTYPE} in
   darwin*)
+    bindkey '^[[A' history-beginning-search-backward-end
+    bindkey '^[[B' history-beginning-search-backward-end
     alias ls="ls -G"
     alias la="ls -lAh"
     # cdの後にlsの実行
     chpwd() { la -G}
   ;;
   linux*)
+    bindkey '^[OA' history-beginning-search-backward-end
+    bindkey '^[OB' history-beginning-search-forward-end
     alias ls="ls --color=auto"
     alias la="ls -la --color=auto"
     chpwd() { ls -lth --color=auto }
