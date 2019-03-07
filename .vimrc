@@ -32,6 +32,10 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 "強調表示"
 set cursorline
 set cursorcolumn
+"xで文字切り取り時にレジスタを更新しない"
+"(内容を保持するレジスタを指定している)"
+noremap PP "0p
+noremap x "_x
 
 "vimで生成した時にテンプレートで作成する"
 autocmd BufNewFile *.py 0r $HOME/.vim/template/python.txt
