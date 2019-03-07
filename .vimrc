@@ -4,12 +4,12 @@ syntax on
 set number
 "自動インデント"
 set autoindent
-"tabでスペース2つ"
-set tabstop=2
 "タブを半角スペースで挿入"
 set expandtab
-"自動生成するタブをスペース2つ分にする"
+"行頭でのタブをスペース2つ分にする"
 set shiftwidth=2
+"行頭以外のtabでスペース2つ"
+set tabstop=2
 "jjでコマンドラインモードに移行"
 inoremap jj <Esc>
 "バックスペースキーの有効化"
@@ -22,6 +22,16 @@ set encoding=utf-8
 set fileencoding=utf-8
 "読み込み時のエンコーディング(左から)"
 set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
+"スワップファイルを作成しない設定と変更時自動読込設定"
+set noswapfile
+set autoread
+"検索語をハイライト"
+set hlsearch
+"ESC2回押すとハイライト解除"
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+"強調表示"
+set cursorline
+set cursorcolumn
 
 "vimで生成した時にテンプレートで作成する"
 autocmd BufNewFile *.py 0r $HOME/.vim/template/python.txt
