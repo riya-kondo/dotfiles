@@ -3,13 +3,15 @@ syntax on
 "行番号表示"
 set number
 "自動インデント"
-set autoindent
+set smartindent;
 "タブを半角スペースで挿入"
 set expandtab
 "行頭でのタブをスペース2つ分にする"
 set shiftwidth=2
 "行頭以外のtabでスペース2つ"
 set tabstop=2
+"連続した空白に対して戻る数"
+set softtabstop=2
 "jjでコマンドラインモードに移行"
 inoremap jj <Esc>
 "バックスペースキーの有効化"
