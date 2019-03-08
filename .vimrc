@@ -3,7 +3,7 @@ syntax on
 "行番号表示"
 set number
 "自動インデント"
-set smartindent;
+set smartindent
 "タブを半角スペースで挿入"
 set expandtab
 "行頭でのタブをスペース2つ分にする"
