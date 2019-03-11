@@ -130,7 +130,9 @@ zstyle ':vcs_info:*' actionformats "[%b|%a]%c%u"
 _vcs_precmd () { vcs_info }
 # _vcs_precmdをフック関数として登録
 add-zsh-hook precmd _vcs_precmd
-PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})%n${reset_color}@${fg[blue]}%m${reset_color}(%D %*) "
+# プロンプトの設定
+PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})%n${reset_color}"
+PROMPT=$PROMPT'@%B%U${fg[blue]}%m${reset_color}(%D %*) '
 PROMPT=$PROMPT'${vcs_info_msg_0_}'
 PROMPT=$PROMPT' %~
 %# '

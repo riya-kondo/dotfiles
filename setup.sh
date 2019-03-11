@@ -3,7 +3,7 @@
 DOT_FILES=( .??* )
 NG_LIST=( .git .gitignore .DS_Store .proxy_setup)
 
-# zshフォルダのチェック
+# zshディレクトリのチェック
 if [ ! -d $HOME/zsh ]; then
   mkdir $HOME/zsh
 fi
@@ -19,7 +19,9 @@ if [ ! -f $HOME/.vim/colors/molokai.vim ]; then
       mv molokai.vim $HOME/.vim/colors/molokai.vim
 fi
 # templateディレクトリをリンク付け
-ln -s $HOME/dotfiles/template $HOME/.vim
+if [ ! -d $HOME/.vim/template ]; then
+  ln -s $HOME/dotfiles/template $HOME/.vim
+fi
 
 for file in ${DOT_FILES[@]}
 do
