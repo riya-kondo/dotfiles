@@ -132,7 +132,7 @@ _vcs_precmd () { vcs_info }
 add-zsh-hook precmd _vcs_precmd
 # プロンプトの設定
 PROMPT="%(?.%{${fg[green]}%}.%{${fg[red]}%})%n${reset_color}"
-PROMPT=$PROMPT'@%B%U${fg[blue]}%m${reset_color}(%D %*) '
+PROMPT=$PROMPT'@%B%U${fg[blue]}%m%u%b${reset_color}(%D %*) '
 PROMPT=$PROMPT'${vcs_info_msg_0_}'
 PROMPT=$PROMPT' %~
 %# '
