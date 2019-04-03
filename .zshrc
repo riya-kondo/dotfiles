@@ -157,6 +157,7 @@ case ${OSTYPE} in
     bindkey '^[OB' history-beginning-search-forward-end
     alias ls="ls --color=auto"
     alias la="ls -la --color=auto"
+    alias grep="grep --color=auto"
     chpwd() { ls -lth --color=auto }
   ;;
 esac
