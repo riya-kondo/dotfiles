@@ -150,7 +150,7 @@ case ${OSTYPE} in
     alias ls="ls -G"
     alias la="ls -lAh"
     # cdの後にlsの実行
-    chpwd() { la -G}
+    chpwd() { ls -G}
   ;;
   linux*)
     bindkey '^[OA' history-beginning-search-backward-end
