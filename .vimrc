@@ -67,3 +67,4 @@ set statusline+=[%{&fileformat}]
 set statusline+=[%{has('multi_byte')&&\&fenc!=''?&fenc:&encoding}]
 "全体行中の行数表示"
 set statusline+=[ROW=%l/%L]
+set statusline+=[COLUMN=%c]
