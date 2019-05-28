@@ -146,7 +146,7 @@ alias so="source"
 case ${OSTYPE} in
   darwin*)
     bindkey '^[[A' history-beginning-search-backward-end
-    bindkey '^[[B' history-beginning-search-backward-end
+    bindkey '^[[B' history-beginning-search-forward-end
     alias ls="ls -G"
     alias la="ls -lAh"
     # cdの後にlsの実行
