@@ -46,6 +46,8 @@ autocmd BufNewFile *.html 0r $HOME/.vim/template/html.txt
 "カラースキームの指定(~/.vim/colors/)"
 set t_Co=256
 colorscheme molokai
+"コメント色設定"
+:hi Comment ctermfg=DarkBlue
 
 "ステータスラインの表示"
 set laststatus=2
