@@ -48,10 +48,15 @@ set t_Co=256
 colorscheme molokai
 "コメント色設定"
 :hi Comment ctermfg=DarkBlue
+"括弧補完(括弧の後に改行をしたら補完をする"
+"<CR> = <C-m>: １行下の先頭へ移動"
+inoremap {<Enter> {}<Left><CR><C-h><ESC><S-o>
+inoremap [<Enter> []<Left><CR><C-h><ESC><S-o>
+inoremap (<Enter> ()<Left><CR><C-h><ESC><S-o>
 
 "ステータスラインの表示"
 set laststatus=2
-"ファイルナンバー表示"
+"バッファナンバー表示"
 set statusline=[%n]
 "ファイル名表示"
 set statusline+=%<%F
