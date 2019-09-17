@@ -1,5 +1,7 @@
 # proxy設定
-source ${HOME}/.proxy_setup
+if [ -f ${HOME}/.proxy_setup ]; then
+  source ${HOME}/.proxy_setup
+fi
 
 # 文字コードをUTF-8に設定
 export LANG=ja_JP.UTF-8
