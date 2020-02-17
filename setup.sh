@@ -7,6 +7,9 @@ NG_LIST=( .git .gitignore .DS_Store .proxy_setup)
 if [ ! -d $HOME/zsh ]; then
   mkdir $HOME/zsh
 fi
+# proxy設定ファイルのコピー
+cp $HOME/dotfiles/proxy.conf $HOME
+
 # カラースキームのチェック
 if [ ! -f $HOME/.vim/colors/molokai.vim ]; then
   mkdir -p $HOME/.vim/colors
