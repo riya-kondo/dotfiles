@@ -1,5 +1,5 @@
 ## overview
-- 自分用の隠しファイルたちです。ホームディレクトリでcloneして使います。
+- 自分用の隠しファイルたちです．ホームディレクトリでcloneして使います．
 ## requirements
 - zsh  
 ## Usage
@@ -8,7 +8,7 @@
 >$ cd dotfiles  
 >$ ./setup.sh  
 ## proxy
-- ~/.proxy_setupに追記してproxyを設定できます。
+- ~/.proxy_confにproxyサーバのアドレスを記述すると，`proxy`コマンドでproxyを設定できます．
 ## vim cheat sheet
 - 個人的によく使うの 
 

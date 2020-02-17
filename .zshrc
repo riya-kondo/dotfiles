@@ -1,6 +1,6 @@
 # proxy設定
 if [ -f ${HOME}/.proxy_setup ]; then
-  source ${HOME}/.proxy_setup
+  alias proxy="source ${HOME}/dotfiles/.proxy_setup"
 fi
 
 # 文字コードをUTF-8に設定
