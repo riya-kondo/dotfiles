@@ -1,14 +1,12 @@
 #! /bin/zsh
 
 DOT_FILES=( .??* )
-NG_LIST=( .git .gitignore .DS_Store .proxy_setup)
+NG_LIST=( .git .gitignore .DS_Store)
 
 # zshディレクトリのチェック
 if [ ! -d $HOME/zsh ]; then
   mkdir $HOME/zsh
 fi
-# proxy設定ファイルのコピー
-cp $HOME/dotfiles/proxy.conf $HOME
 
 # カラースキームのチェック
 if [ ! -f $HOME/.vim/colors/molokai.vim ]; then
@@ -28,7 +26,7 @@ do
     if (( ${NG_LIST[(I)$file]} )); then
       echo $file 'is in NG_LIST'
     else
-	    ln -s $HOME/dotfiles/$file $HOME/$file
+      ln -s $HOME/dotfiles/$file $HOME/$file
     fi
   fi
 done

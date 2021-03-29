@@ -8,7 +8,7 @@
 >$ cd dotfiles  
 >$ ./setup.sh  
 ## proxy
-- ~/.proxy_confにproxyサーバのアドレスを記述すると，`proxy`コマンドでproxyを設定できます．
+- `proxy_setup.sh`にproxyサーバのアドレスを記述すると，`proxy`コマンドで参照するプロキシサーバを設定できます．
 ## vim cheat sheet
 - 個人的によく使うの 
 
