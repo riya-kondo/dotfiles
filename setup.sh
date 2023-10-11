@@ -20,13 +20,14 @@ if [ ! -d $HOME/.vim/template ]; then
   ln -s $HOME/dotfiles/template $HOME/.vim
 fi
 
+CURRENT=$(cd $(dirname $0); pwd)
 for file in ${DOT_FILES[@]}
 do
   if [ ! -d $file ]; then;
     if (( ${NG_LIST[(I)$file]} )); then
       echo $file 'is in NG_LIST'
     else
-      ln -s $HOME/dotfiles/$file $HOME/$file
+      ln -s $CURRENT/$file $HOME/$file
     fi
   fi
 done
